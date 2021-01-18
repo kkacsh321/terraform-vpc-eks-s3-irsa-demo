@@ -32,6 +32,6 @@ module "aws_vpc" {
   tags = {
     env     = var.env
     project = "terraform-vpc-eks-s3-irsa-demo"
-    owner   = "opsmonkeys"
+    owner   = "yourself"
   }
 }

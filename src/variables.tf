@@ -165,7 +165,7 @@ variable "map_accounts" {
   type        = list(string)
 
   default = [
-    "164884221800",
+    "<your account id>",
   ]
 }
 
