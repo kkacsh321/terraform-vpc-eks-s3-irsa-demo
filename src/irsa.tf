@@ -1,4 +1,3 @@
-# IRSA Role for S3 Testing
 data "aws_iam_policy_document" "s3_policy" {
   statement {
     actions = [
@@ -16,6 +15,7 @@ data "aws_iam_policy_document" "s3_policy" {
 
     resources = [
       aws_s3_bucket.irsa.arn,
+      "${aws_s3_bucket.irsa.arn}/*"
     ]
   }
 }

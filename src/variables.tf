@@ -3,25 +3,27 @@ variable "region" {
   default     = "us-west-2"
 }
 
+#SET THESE ROLES TO YOUR TERRAFORM ROLES PER ACCOUNT
 variable "role_arn" {
   description = "Role ARN"
   type        = map(string)
 
   default = {
-    test = "arn:aws:iam::164884221800:role/devops"
-    stg  = "arn:aws:iam::075298452561:role/devops"
-    prd  = "arn:aws:iam::437115756493:role/devops"
+    test = "arn:aws:iam::<account_id>:role/devops"
+    stg  = "arn:aws:iam::<account_id>:role/devops"
+    prd  = "arn:aws:iam::<account_id>:role/devops"
   }
 }
 
+#SET THESE TO YOUR AWS ACCOUNT ID
 variable "aws_account_id" {
   description = "Account ID"
   type        = map(string)
 
   default = {
-    test = "164884221800"
-    stg  = "075298452561"
-    prd  = "437115756493"
+    test = "<account_id>"
+    stg  = "<account_id>"
+    prd  = "<account_id>"
   }
 }
 
